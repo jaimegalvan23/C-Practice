@@ -1,26 +1,21 @@
+#ifndef HUMAN_H
+#define HUMAN_H
+
 #include <string>
-using namespace std;
 
-class Human{
+class Human {
 public:
-    Human(const string &name, int age) : name_(name), age_(age) {}
+    Human(const std::string &name, int age);
 
-    void setName(const string& name) {
-        name_ = name;
-    }
-    void setAge(int age) {
-        age_ = age;
-    }
+    void setName(const std::string& name);
+    void setAge(int age);
 
-    string getName() {
-        return name_;
-    }
-    int getAge() {
-        return age_;
-    }
+    std::string getName() const;
+    int getAge() const;
 
 private:
-    string name_;
+    std::string name_;
     int age_;
-
 };
+
+#endif
