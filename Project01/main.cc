@@ -33,3 +33,5 @@ int main() {
 
   return 0;
 }
+//g++ main.cc Human.H Human.cc -o program <- This is to make build
+//./program <- this is to run build
