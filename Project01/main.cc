@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Human.h"
+#include "Actions.h"
 
 int main() {
   std::string name;
@@ -25,13 +26,16 @@ int main() {
       std::cout << "you went to the store\n";
     } else if (input == "3") {
       std::cout << "You went outside\n";
+      outside();
     } else if (input == "4") {
       break;
+    } else {
+      std::cout << "invalid input, please try again\n";
     }
   }
   std::cout << "Thanks for playing\n";
 
   return 0;
 }
-//g++ main.cc Human.H Human.cc -o program <- This is to make build
+//g++ main.cc Human.h Human.cc Actions.cc Actions.h -o program <- This is to make build
 //./program <- this is to run build
